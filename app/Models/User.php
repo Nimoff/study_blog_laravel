@@ -16,11 +16,17 @@ class User extends Authenticatable
     const ROLE_ADMIN = 0;
     const ROLE_READER = 1;
 
-    public static function getRole(){
+    public static function getRole()
+    {
         return [
             self::ROLE_ADMIN => 'Админ',
             self::ROLE_READER => 'Читатель'
         ];
+    }
+
+    public function likedPost()
+    {
+        return $this->belongsToMany(Post::class, 'post_user_likes', 'user_id', 'post_id');
     }
 
     /**
@@ -53,4 +59,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 }
