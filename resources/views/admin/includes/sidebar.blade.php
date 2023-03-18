@@ -4,6 +4,13 @@
         <div class="sidebar">
             <ul class="nav nav-pills nav-sidebar flex-column mt-3" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
+                    <a href=" {{ route('admin.index') }} " class="nav-link">
+                        <p>
+                            Главная
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href=" {{ route('admin.user.index') }} " class="nav-link">
                         <p>
                             Пользователи
