@@ -50,7 +50,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a href=" {{ route('admin.post.edit', $post->id) }} ">
+                                    <a href=" {{ route('personal.liked.delete', $post->id) }} ">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                              fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                                             <path
@@ -59,7 +59,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <form action=" {{route('admin.post.delete', $post->id)}} " method="POST">
+                                    <form action=" {{route('personal.liked.delete', $post->id)}} " method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-bg-danger border-0">
